@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./mixins";
+@import "./base";
+@import "./utilities";
+
+// HEADER-FOOTER
+@import "./sections/HeaderFooter/header";
+@import "./sections/HeaderFooter/footer";
+
+// HOME
+@import "./sections/Home/featured";
+@import "./sections/Home/home_matches";
+@import "./sections/Home/home_meet_players";
+@import "./sections/Home/promotion";
+
+//SIGN-IN
+@import "./sections/SignIn/signIn";
+
+// USER DASHBOARD
+@import "./sections/Dashboard/dashboard";
+
+// THE TEAM
+@import "./sections/TheTeam/theTeam";
+
+// MATCHES
+@import "./sections/Matches/matches";

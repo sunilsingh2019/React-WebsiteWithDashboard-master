@@ -1,0 +1,150 @@
+.featured {
+  background-color: $color-blue-primary;
+  &-container {
+    margin: 0 auto;
+    width: 128rem;
+    height: 80rem;
+    overflow: hidden;
+
+    @include respond-mediaQuery(ipad) {
+      width: 100%;
+      padding: 0 2.5rem;
+    }
+  }
+}
+
+.featured-stripe {
+  position: relative;
+
+  &__item {
+    width: 23rem;
+    height: 120rem;
+    position: absolute;
+
+    @include respond-mediaQuery(phone) {
+      width: 15rem;
+    }
+  }
+
+  &__item:nth-child(1) {
+    // Screen width ipad
+    @include respond-mediaQuery(ipad) {
+      transform: rotate(25deg) translate(7rem, -26rem) !important;
+      -webkit-transform: rotate(25deg) translate(7rem, -26rem) !important;
+      -moz-transform: rotate(25deg) translate(7rem, -26rem) !important;
+      -ms-transform: rotate(25deg) translate(7rem, -26rem) !important;
+      -o-transform: rotate(25deg) translate(7rem, -26rem) !important;
+    }
+    // Screen width phone
+    @include respond-mediaQuery(phone) {
+      transform: rotate(0deg) translate(3rem, -26rem) !important;
+      -webkit-transform: rotate(0deg) translate(3rem, -26rem) !important;
+      -moz-transform: rotate(0deg) translate(3rem, -26rem) !important;
+      -ms-transform: rotate(0deg) translate(3rem, -26rem) !important;
+      -o-transform: rotate(0deg) translate(3rem, -26rem) !important;
+    }
+  }
+  &__item:nth-child(2) {
+    // Screen width ipad
+    @include respond-mediaQuery(ipad) {
+      transform: rotate(25deg) translate(31rem, -39.7rem) !important;
+      -webkit-transform: rotate(25deg) translate(31rem, -39.7rem) !important;
+      -moz-transform: rotate(25deg) translate(31rem, -39.7rem) !important;
+      -ms-transform: rotate(25deg) translate(31rem, -39.7rem) !important;
+      -o-transform: rotate(25deg) translate(31rem, -39.7rem) !important;
+    }
+    // Screen width phone
+    @include respond-mediaQuery(phone) {
+      transform: rotate(0deg) translate(19rem, -39.7rem) !important;
+      -webkit-transform: rotate(0deg) translate(19rem, -39.7rem) !important;
+      -moz-transform: rotate(0deg) translate(19rem, -39.7rem) !important;
+      -ms-transform: rotate(0deg) translate(19rem, -39.7rem) !important;
+      -o-transform: rotate(0deg) translate(19rem, -39.7rem) !important;
+    }
+  }
+  &__item:nth-child(3) {
+    // Screen width ipad
+    @include respond-mediaQuery(ipad) {
+      transform: rotate(25deg) translate(55rem, -49.8rem) !important;
+      -webkit-transform: rotate(25deg) translate(55rem, -49.8rem) !important;
+      -moz-transform: rotate(25deg) translate(55rem, -49.8rem) !important;
+      -ms-transform: rotate(25deg) translate(55rem, -49.8rem) !important;
+      -o-transform: rotate(25deg) translate(55rem, -49.8rem) !important;
+    }
+    // Screen width phone
+    @include respond-mediaQuery(phone) {
+      transform: rotate(0deg) translate(35rem, -37.8rem) !important;
+      -webkit-transform: rotate(0deg) translate(35rem, -37.8rem) !important;
+      -moz-transform: rotate(0deg) translate(35rem, -37.8rem) !important;
+      -ms-transform: rotate(0deg) translate(35rem, -37.8rem) !important;
+      -o-transform: rotate(0deg) translate(35rem, -37.8rem) !important;
+    }
+  }
+}
+.featured-text {
+  position: relative;
+  // screen width phone
+  @include respond-mediaQuery(phone) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+  }
+  &__number {
+    font-size: 26rem;
+    color: $color-white-primary;
+    position: absolute;
+    transform: translate(26rem, 17rem);
+    -webkit-transform: translate(26rem, 17rem);
+    -moz-transform: translate(26rem, 17rem);
+    -ms-transform: translate(26rem, 17rem);
+    -o-transform: translate(26rem, 17rem);
+
+    @include respond-mediaQuery(phone) {
+      color: $color-blue-primary;
+    }
+  }
+
+  &__player {
+    width: 50rem;
+    height: 50rem;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+
+    // screen width phone
+    @include respond-mediaQuery(phone) {
+      display: none;
+    }
+  }
+  &__first,
+  &__second {
+    position: absolute;
+    background: $color-blue-primary;
+    color: $color-white-primary;
+    font-size: 9rem;
+    text-transform: uppercase;
+    padding: 0px 2rem;
+
+    // Screen width phone
+    @include respond-mediaQuery(phone) {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  // Screen width phone
+  &__number,
+  &__number,
+  &__second,
+  &__first {
+    @include respond-mediaQuery(phone) {
+      position: static;
+      transform: none !important;
+      -webkit-transform: none !important;
+      -moz-transform: none !important;
+      -ms-transform: none !important;
+      -o-transform: none !important;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.home-matches {
+  background: $color-blue-secondary;
+  margin-top: 1rem;
+  padding: 5rem 0;
+
+  &__title {
+  }
+  &__wrapper {
+    flex-wrap: wrap;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 6rem;
+
+    .match {
+      width: 50%;
+      margin: 3.5rem 0;
+      padding: 0 0.5rem;
+      // Screen width phone
+      @include respond-mediaQuery(phone) {
+        width: 100%;
+        margin: 0 0 3.5rem;
+      }
+
+      &__date {
+        color: #ffffff;
+        font-size: 1.8rem;
+      }
+      &__group {
+        .club {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+
+          &__info {
+            background: $color-white-primary;
+            flex-grow: 1;
+            margin-right: 0.5rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+
+            .club-icon {
+              width: 5rem;
+              height: 5rem;
+              margin-right: 1rem;
+            }
+            .club-name {
+              font-size: 3rem;
+            }
+          }
+          &__score {
+            background: $color-blue-primary;
+            width: 7rem;
+            color: $color-white-primary;
+            font-size: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  &__link-morematches {
+  }
+}

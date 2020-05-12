@@ -1,0 +1,169 @@
+.admin {
+  .admin-container {
+    display: flex;
+
+    .admin__left-nav {
+      min-height: 100vh;
+      background: $color-black-tertiary;
+      border-right: 2px solid $color-blue-primary;
+    }
+    .admin__right {
+      flex-grow: 1;
+
+      // ADMIN DASHBOARD
+      .user-dashboard {
+        font-size: 6rem;
+        color: $color-blue-secondary;
+        text-align: center;
+        margin-top: 20rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      // ADMIN-PLAYER-DETAILS
+      // ADMIN-MATCHES-DETAILS
+      .admin-players-details,
+      .admin-matches-details {
+        table th {
+          font-size: 1.3rem;
+          font-weight: bold;
+          color: $color-blue-primary;
+        }
+        table {
+          margin-bottom: 4rem;
+          h2 {
+            padding: 3rem 0;
+            text-transform: uppercase;
+          }
+
+          .matches-tag {
+            font-weight: bold;
+          }
+          .matches-tag--red {
+            color: #f44336;
+          }
+
+          .matches-tag--green {
+            color: #4caf50;
+          }
+          td {
+            font-size: 1.2rem;
+            a {
+              text-decoration: none;
+              color: $color-blue-primary;
+              border-bottom: 1px solid $color-blue-secondary;
+              padding-bottom: 0.3rem;
+              @include transition-delay-sm;
+
+              &:hover {
+                border-bottom: 1px solid $color-blue-primary;
+              }
+            }
+          }
+          .admin-progress-icon {
+            text-align: center;
+            margin: 20px 0px;
+          }
+        }
+      }
+      // COMMON STYLESHEET
+      .admin-handle-match,
+      .admin-handle-player {
+        width: 42rem;
+        padding: 2rem;
+      }
+      .admin-handle-match__title,
+      .admin-handle-player__title {
+        color: $color-black-secondary;
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid $color-white-tertiary;
+        padding-bottom: 0.7rem;
+      }
+      .admin-handle-match {
+      }
+
+      .admin-handle-player {
+        input[type="file"] {
+          display: block;
+          margin-bottom: 3rem;
+          cursor: pointer;
+          width: 100%;
+          background-color: #e9e9e9 !important;
+          border: 1px solid #dddd;
+          height: 3.2rem;
+          padding: 0.5rem 1.5rem;
+          outline: none;
+        }
+      }
+
+      .label-input {
+        display: inline-block;
+        background: $color-blue-tertiary;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .form-field {
+        margin-bottom: 3rem;
+
+        .player-img {
+          width: 20rem;
+          margin-bottom: 0.6rem;
+        }
+        .btn-remove-img {
+          padding: 0.7rem 1.5rem;
+          background: $color-blue-primary;
+          color: $color-white-primary;
+          @include transition-delay-sm;
+
+          &:hover {
+            margin-left: 0.4rem;
+          }
+        }
+
+        select {
+          height: 3.2rem;
+          background: $color-white-tertiary;
+          display: block;
+          width: 100%;
+          border: 1px solid $color-grey-secondary;
+          padding: 0 0.8rem;
+          outline: none;
+          @include transition-delay-sm;
+
+          &:focus {
+            border: 1px solid $color-blue-primary;
+          }
+        }
+      }
+      .fields-group {
+        .fields-wrapper {
+          display: flex;
+          justify-content: space-between;
+
+          .select-team {
+            flex: 1;
+          }
+          .input-team-score {
+            width: 5rem;
+          }
+
+          input {
+            background: $color-blue-secondary !important;
+            border: 1px solid $color-blue-secondary;
+            @include transition-delay-sm;
+
+            &:focus {
+              border: 1px solid $color-blue-primary;
+            }
+          }
+        }
+      }
+
+      .admin-submit-form {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

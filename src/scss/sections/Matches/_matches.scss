@@ -1,0 +1,116 @@
+.the-matches-container {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+
+  //Screen width phone
+  @include respond-mediaQuery(phone) {
+    flex-flow: column;
+  }
+  .the-matches {
+    width: 75%;
+    //Screen width phone
+    @include respond-mediaQuery(phone) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    &__filter {
+      display: flex;
+      background: $color-blue-tertiary;
+      border-bottom: 2px solid $color-black-secondary;
+
+      .match-filter-box {
+        border-right: 2px solid $color-black-secondary;
+        padding: 1rem 2rem;
+        .match-filter__title {
+          color: $color-black-secondary;
+          font-size: 1.4rem;
+          font-weight: normal;
+          line-height: 2.5rem;
+        }
+        .match-filter__btns {
+          display: flex;
+
+          button {
+            border: none;
+            background: $color-white-primary;
+            margin-right: 0.5rem;
+            cursor: pointer;
+            padding: 0.3rem 0.5rem;
+            outline: none;
+            font-size: 1.3rem !important;
+            @include transition-delay-sm;
+
+            &:hover,
+            &.active {
+              background: $color-blue-secondary;
+              color: $color-white-primary;
+            }
+          }
+        }
+      }
+    }
+    &__lists {
+      .match-item {
+        padding: 1rem 2rem;
+        border-bottom: 2px solid $color-blue-secondary;
+        display: flex;
+        width: 100%;
+        &__teams {
+          border-right: 1px solid $color-blue-secondary;
+          width: 20rem;
+          padding: 1rem 1rem 1rem 0;
+          margin-right: 1rem;
+          .team {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            &:first-child {
+              margin-bottom: 0.7rem;
+            }
+            &__logo,
+            &__name {
+              margin-right: 1.5rem;
+            }
+
+            &__logo {
+              width: 3.2rem;
+            }
+            &__name {
+            }
+            &__result {
+              font-weight: bold;
+            }
+          }
+        }
+        &__info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .match-info {
+          }
+        }
+      }
+    }
+  }
+  .league-table {
+    width: 25%;
+
+    //Screen width phone
+    @include respond-mediaQuery(phone) {
+      width: 100%;
+      padding: 0 2rem;
+      margin-bottom: 3rem;
+    }
+    &-title {
+      background: $color-blue-secondary;
+      color: $color-white-primary;
+      border-bottom: 2px solid $color-black-secondary;
+      height: 6.8rem;
+      display: flex;
+      padding: 0 1rem;
+      align-items: center;
+    }
+  }
+}

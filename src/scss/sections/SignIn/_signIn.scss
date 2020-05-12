@@ -1,0 +1,30 @@
+.sign-in {
+  text-align: center;
+  min-height: 90vh;
+
+  .signin-wrapper {
+    margin-top: 9rem;
+    width: 35rem;
+    display: inline-block;
+    .signin-title {
+      text-transform: uppercase;
+    }
+
+    .signin-form {
+      position: relative;
+      &__input {
+        margin-bottom: 1rem;
+        input {
+          height: 4rem;
+        }
+      }
+      &__submit-btn {
+        width: 10rem;
+      }
+
+      .input-auth-msg {
+        bottom: 4rem;
+      }
+    }
+  }
+}

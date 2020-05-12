@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  background-color: $color-blue-primary;
+  font-size: 1.6rem;
+  color: $color-white-primary;
+  padding: 3rem 0px;
+  width: 100%;
+  background-color: $color-blue-primary;
+
+  &__logo {
+    margin-bottom: 2rem;
+  }
+  &__text {
+    margin: 1rem 0;
+  }
+}

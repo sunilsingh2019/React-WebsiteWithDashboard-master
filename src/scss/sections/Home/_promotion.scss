@@ -1,0 +1,76 @@
+.promotion {
+  padding: 8rem 0 8rem;
+  background-color: $color-white-primary;
+  .promotion-content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+
+    // Screen width phone
+    @include respond-mediaQuery(phone) {
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    &__left {
+      text-transform: uppercase;
+      font-size: 15rem;
+      flex-grow: 1;
+      color: $color-blue-tertiary;
+      // Screen width phone
+      @include respond-mediaQuery(phone) {
+        margin-bottom: 3rem;
+      }
+      span {
+        display: block;
+      }
+    }
+
+    &__right {
+      .promotion-img {
+        width: 28rem;
+        height: 28rem;
+      }
+    }
+  }
+
+  .promotion-enroll {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .enroll-form {
+      margin-bottom: 2rem;
+      &__heading {
+        color: $color-black-secondary;
+      }
+
+      &__input {
+        width: 33.5rem;
+        display: inline-block;
+        position: relative;
+        z-index: 12;
+        margin-bottom: 1rem;
+
+        input {
+          height: 4rem;
+        }
+      }
+      &__error-label,
+      &__success-label {
+        color: $color-red;
+      }
+
+      &__btn {
+        width: 8rem;
+      }
+    }
+    .enroll-discl {
+      font-size: 1.4rem;
+      width: 40%;
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+// ========== MAIN ========
+main.main {
+  padding: 9rem 0 0;
+  min-height: 95vh;
+}
+//======= CONTAINER ============
+.container {
+  width: 102.4rem;
+  margin: 0 auto;
+
+  // Screen width <=ipad width
+  @include respond-mediaQuery(ipad) {
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
+
+//========== BUTTON =========
+.btn {
+  display: inline-block;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary,
+.btn span {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  border: 1px solid $color-blue-primary;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+  background-color: $color-white-primary;
+  @include transition-delay-sm;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    height: 100%;
+    width: 100%;
+    background-color: $color-blue-primary;
+    z-index: -1;
+    @include transition-delay-sm;
+  }
+
+  &:hover {
+    color: $color-white-primary !important;
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.btn-secondary {
+  position: relative;
+  z-index: 10;
+  border: 1px solid $color-grey-secondary;
+  line-height: 3.5rem;
+  padding: 0 1.5rem;
+  background-color: $color-blue-primary;
+  color: $color-white-primary;
+  @include transition-delay-sm;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    height: 100%;
+    width: 100%;
+    background-color: $color-black-primary;
+    z-index: -1;
+    @include transition-delay-sm;
+  }
+
+  &:hover {
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+//========= HEADING =========
+.heading-secondary {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+// ======== Input =====
+.utl-input-wrapper {
+  position: relative;
+}
+.utl-input {
+  width: 100%;
+  background-color: $color-white-tertiary !important;
+  border: 1px solid $color-grey-secondary;
+  height: 3.2rem;
+  padding: 0 1.5rem;
+  outline: none;
+  @include transition-delay-sm;
+
+  &:focus {
+    border: 1px solid $color-blue-primary;
+  }
+}
+
+.input-validation-msg,
+.input-auth-msg {
+  color: $color-red;
+  font-size: 1rem;
+  position: absolute;
+  z-index: 13;
+  bottom: 0.3rem;
+}
+
+//======= Progress icon =====
+.progress-icon {
+  margin-left: 57%;
+  margin-top: 5rem;
+}

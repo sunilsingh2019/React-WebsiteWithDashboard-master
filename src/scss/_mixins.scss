@@ -1,0 +1,143 @@
+/*
+====== BORDER RADIOUS ========
+= 50%
+*/
+
+@mixin border-radius-50percent {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/*
+====== TRANSFORM XY ========
+= -50%
+*/
+@mixin transform-y-minus50percent {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+@mixin transform-x-minus50percent {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+@mixin transform-xy-minus50percent {
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+/*
+====== TRANSITION DELAY ========
+= 0.3S
+*/
+@mixin transition-delay-sm {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+/*
+====== TRANSFORM SCALE ========
+= 1.1
+*/
+@mixin transform-scale-lg {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+@mixin transform-scale-xlg {
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+}
+/*
+====== SKEW ========
+= -125deg
+*/
+@mixin skew-sm {
+  transform: skewX(-125deg);
+  -webkit-transform: skewX(-125deg);
+  -moz-transform: skewX(-125deg);
+  -ms-transform: skewX(-125deg);
+  -o-transform: skewX(-125deg);
+}
+
+/*
+====== BOX SHADOW ========
+*/
+@mixin box-shadow-sm {
+  box-shadow: 0 0.1rem 0.5rem $color-white-secondary;
+  -webkit-box-shadow: 0 0.1rem 0.5rem $color-white-secondary;
+}
+
+/*
+====== MEDIA QUERY ========
+BREAK POINT -
+
+0 - 600px: phone,
+600px - 769px : ipad,
+769px - 1040px: ipad-pro,
+1040px - 1280px : laptop,
+1280px > : large -screen 
+
+*/
+
+@mixin respond-mediaQuery($breakpoint) {
+  @if $breakpoint==phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+
+    // width <= 600px
+  }
+
+  @if $breakpoint==ipad {
+    @media (max-width: 49em) {
+      @content;
+    }
+
+    // width <= 769px
+  }
+
+  @if $breakpoint==ipad-pro {
+    @media (max-width: 65em) {
+      @content;
+    }
+
+    // width <= 1040px;
+  }
+
+  @if $breakpoint==laptop {
+    @media (max-width: 80em) {
+      @content;
+    }
+
+    // width <= 1280px
+  }
+
+  @if $breakpoint==big-screen {
+    @media (min-width: 80em) {
+      @content;
+    }
+
+    //  width > 1280px)
+  }
+}

@@ -1,0 +1,78 @@
+.team-container {
+  padding: 3rem;
+  background-size: contain;
+  min-height: 85vh;
+
+  .progress {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    @include transform-x-minus50percent;
+    z-index: 1000;
+  }
+  .team-category {
+    margin-bottom: 4rem;
+
+    &__title {
+      font-size: 4.5rem;
+      color: $color-blue-secondary;
+      margin-bottom: 3rem;
+    }
+    &__players {
+      display: flex;
+      flex-flow: row wrap;
+      .playercard-item {
+        background: $color-white-primary;
+        padding: 0.7rem;
+        margin-right: 1rem;
+        min-height: 33rem;
+        width: 23rem;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        @include box-shadow-sm;
+
+        //Screen width phone
+        @include respond-mediaQuery(phone) {
+          width: 100%;
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+        &__img {
+          background: $color-blue-tertiary;
+        }
+        &__name {
+          position: absolute;
+          z-index: 11;
+          left: 1rem;
+          bottom: 1rem;
+          font-size: 2.2rem;
+          font-weight: bold;
+          color: $color-blue-primary;
+
+          span {
+            display: block;
+            width: 13rem;
+          }
+        }
+        &__number {
+          position: absolute;
+          z-index: 11;
+          bottom: 3rem;
+          right: 1rem;
+          font-size: 8rem;
+          line-height: 6rem;
+          color: $color-blue-tertiary;
+          font-weight: 700;
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
